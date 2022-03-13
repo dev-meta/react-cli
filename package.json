@@ -1,5 +1,5 @@
 {
-  "name": "react-cli",
+  "name": "@react/cli",
   "version": "1.0.0",
   "description": "react 脚手架",
   "main": "index.js",
