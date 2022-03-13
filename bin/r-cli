@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+const figlet = require("figlet");
+const Printer = require("@darkobits/lolcatjs");
+const { program } = require("commander");
+const package = require("../package.json");
+
+const Init = require('../src')
+
+const txt = figlet.textSync("react-cli") + "\n" + "脚手架" + package.version;
+
+const result = Printer.fromString(txt);
+
+program.version(result, "-v, --version");
+
+program
+  .command('init <name>')
+  .description('初始化项目')
+  .option('-f, --force', '强制覆盖已经存在的文件夹')
+  .option('-t, --typescript', '使用tepyscript模板')
+  .action((name, params) => {
+    new Init(name, params);
+  })
+
+try {
+  program.parse(process.argv);
+} catch (error) {
+  console.log('err: ', error)
+}
