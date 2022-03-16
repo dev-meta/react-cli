@@ -39,6 +39,7 @@
     "download-git-repo": "^3.0.2",
     "figlet": "^1.5.2",
     "fs-extra": "^10.0.1",
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "semver": "^7.3.5"
   }
 }

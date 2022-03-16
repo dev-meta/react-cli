@@ -6,6 +6,7 @@ const { inquirerConfig, repo } = require("../config");
 const download = require("download-git-repo");
 const ora = require("ora");
 const chalk = require("chalk");
+const semverLt = require('semver/functions/lt');
 
 class Init {
   constructor(name, options) {
@@ -19,10 +20,20 @@ class Init {
     this.init();
   }
   async init() {
+    this.checkNodeVersion();
     await this.checkFolder();
     await this.downloadRepo();
     await this.updateFiles();
     await this.install();
+  }
+  checkNodeVersion() {
+    const nodeVer = process.version;
+    const targetVer = '12.20.0';
+    if(semverLt(nodeVer, targetVer)) {
+      console.log();
+      console.log(chalk.cyan(`  当前node版本是${nodeVer},可能出现异常，推荐升级到${targetVer}及以上`));
+      console.log();
+    }
   }
   // 检查文件夹是否存在
   checkFolder() {
