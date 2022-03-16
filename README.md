@@ -4,6 +4,7 @@
 
 ## 目录结构
 
+```markdown
 react-cli
 ├── LICENSE
 ├── README.md
@@ -16,6 +17,13 @@ react-cli
     ├── config
     ├── index.js
     └── utils
+```
+
+## 安装方式
+
+```shell
+npm i @chuugoku/react-cli -g
+```
 
 ## 使用方法
 
@@ -23,5 +31,6 @@ react-cli
 react-cli init <projectName> -t -f
 ```
 
--t --typescript 使用typescript模板
+-t --typescript 使用typescript模板  
+
 -f --force 强制覆盖已经存在的目录
