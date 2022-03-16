@@ -1,5 +1,5 @@
 {
-  "name": "@react/cli",
+  "name": "@chuugoku/react-cli",
   "version": "1.0.1",
   "description": "react 脚手架",
   "main": "index.js",

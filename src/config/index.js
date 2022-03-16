@@ -26,7 +26,7 @@ const inquirerConfig = {
 }
 
 const repo = {
-    ts: 'direct:https://github.com/wangzongqi1001/react-template-ts',
+    ts: 'direct:https://github.com/wangzongqi1001/react-template-ts#main',
     js: 'direct:https://github.com/wangzongqi1001/react-template'
 }
 
